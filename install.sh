@@ -28,7 +28,6 @@ apt-get install -y ant curl git openssh-server unzip
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
 $pluginsDirectory/apache2/script/20-vhosts.sh
-$pluginsDirectory/apache2/script/30-jenkins_virtual_host.sh
 
 # PHP 5
 $pluginsDirectory/php5/script/php.sh
