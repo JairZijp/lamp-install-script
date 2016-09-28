@@ -12,6 +12,14 @@ if ! id "lamp" > /dev/null 2>&1; then
     adduser lamp sudo
 fi
 
+# Add languages to prevent warnings
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+
+echo "127.0.0.1 lamp" >> /etc/hosts
 echo "lamp" > /etc/hostname
 hostname lamp
 
@@ -34,7 +42,6 @@ $pluginsDirectory/php5/script/php.sh
 
 # SQL
 $pluginsDirectory/sql/script/00-install.sh
-
 
 # Setting bashrc
 echo "Setting bashrc..."
