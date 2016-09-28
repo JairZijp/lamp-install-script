@@ -5,8 +5,8 @@ a2enmod vhost_alias
 a2enmod rewrite
 a2enmod xsendfile
 
-a2dissite default
-a2dissite 000-default
+#a2dissite default
+#a2dissite 000-default
 service apache2 reload
 
 chown -R lamp.lamp /var/www
