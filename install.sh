@@ -5,12 +5,10 @@ if [ `id -u` -ne '0' ]; then
   exit 1
 fi
 
-# Lamp user creation
-if ! id "lamp" > /dev/null 2>&1; then
-    echo "Lamp user does not exist - Creating lamp user..."
-    (echo "lamp"; echo "lamp"; echo ""; echo ""; echo ""; echo ""; echo ""; echo ""; echo "Y") | adduser -q lamp
-    adduser lamp sudo
-fi
+# Colors 
+apt-get install dconf-cli
+curl https://raw.githubusercontent.com/Anthony25/gnome-terminal-colors-solarized/master/set_dark.sh | sudo sh
+
 
 # Add languages to prevent warnings
 export LANGUAGE=en_US.UTF-8
@@ -18,6 +16,13 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 dpkg-reconfigure locales
+
+# Lamp user creation
+if ! id "lamp" > /dev/null 2>&1; then
+    echo "Lamp user does not exist - Creating lamp user..."
+    (echo "lamp"; echo "lamp"; echo ""; echo ""; echo ""; echo ""; echo ""; echo ""; echo "Y") | adduser -q lamp
+    adduser lamp sudo
+fi
 
 echo "127.0.0.1 lamp" >> /etc/hosts
 echo "lamp" > /etc/hostname
