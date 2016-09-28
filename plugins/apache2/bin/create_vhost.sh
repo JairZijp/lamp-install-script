@@ -35,6 +35,7 @@ VHOST_SETTINGS="
 </VirtualHost>"
 echo "$VHOST_SETTINGS" > /etc/apache2/sites-available/$1  2>> $log
 a2ensite $1 >> $log 2>&1
+ln -s /etc/apache2/sites-available/* /etc/apache2/sites-enabled
 sleep 0.1
 service apache2 reload >> $log 2>&1
 

@@ -5,11 +5,6 @@ if [ `id -u` -ne '0' ]; then
   exit 1
 fi
 
-# Colors 
-apt-get install dconf-cli
-curl https://raw.githubusercontent.com/Anthony25/gnome-terminal-colors-solarized/master/set_dark.sh | sudo sh
-
-
 # Add languages to prevent warnings
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
