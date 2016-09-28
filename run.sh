@@ -5,12 +5,12 @@ if [ `id -u` -ne '0' ]; then
   exit 1
 fi
 
-branch="master"
+branch="development"
 if [ $# -gt 0 ]; then
   branch=$1
 fi
 
-repo="mhlavac/lamp-install-script"
+repo="JairZijp/lamp-install-script"
 if [ $# -gt 1 ]; then
   repo=$2
 fi
