@@ -3,7 +3,7 @@
 baseDirectory=$(dirname $0)
 
 # PHP5
-apt-get install -y php5 php5-curl php5-intl php5-mcrypt php5-mysqln libapache2-mod-php5
+apt-get install -y php5 php5-curl php5-intl php5-mcrypt php5-mysqln libapache2-mod-php5 php5-xdebug php5-memcache php5-memcached php5-mongo php5-mysqlnd php5-acpu
 
 timezone=`find /usr/share/zoneinfo -type f | xargs md5sum | grep $(md5sum /etc/localtime | awk '{print $1};') | awk '{print $2};' | cut -c 21-`
 
