@@ -12,11 +12,16 @@ fi
 #locale-gen en_US.UTF-8
 #dpkg-reconfigure locales
 
-echo "LANGUAGE=en_US.UTF-8
-LANG=en_US.UTF-8
-LC_ALL=en_US.UTF-8" >> ~/.profile
+nano ~./.bash_profile
+echo "Setting locale..."
+echo "# Locale settings
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8">>~/.bash_profile
 
-dpkg-reconfigure locales
+locale-gen en_US.UTF-8
+
+sudo dpkg-reconfigure locales
 
 # Lamp user creation
 if ! id "lamp" > /dev/null 2>&1; then
