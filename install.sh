@@ -49,3 +49,7 @@ $pluginsDirectory/sql/script/00-install.sh
 echo "Setting bashrc..."
 cp $baseDirectory/bash.bashrc ~lamp/.bashrc
 cp $baseDirectory/bash.bashrc /etc/bash.bashrc
+
+echo "Change config Apache2 for support file extension..."
+echo "IncludeOptional conf-enabled/*
+	  IncludeOptional sites-enabled/*" >> /etc/apache2/apache2.conf 
