@@ -19,6 +19,8 @@ echo "# Locale settings
 	LANG=en_US.UTF-8
 	LC_ALL=en_US.UTF-8">>~/.bash_profile
 
+source ~./bash_profile	
+
 locale-gen en_US.UTF-8
 
 sudo dpkg-reconfigure locales
