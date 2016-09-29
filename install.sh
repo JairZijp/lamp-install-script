@@ -33,7 +33,7 @@ echo "Installing system wide applications..."
 command -v javac || apt-get install -y openjdk-7-jdk
 apt-get install -y ant curl git openssh-server unzip
 
-echo $pluginsDirectory/apache2/script/
+echo "$pluginsDirectory/apache2/script/"
 
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
