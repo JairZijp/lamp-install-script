@@ -6,10 +6,16 @@ if [ `id -u` -ne '0' ]; then
 fi
 
 # Add languages to prevent warnings
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
+#export LANGUAGE=en_US.UTF-8
+#export LANG=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
+#locale-gen en_US.UTF-8
+#dpkg-reconfigure locales
+
+echo "LANGUAGE=en_US.UTF-8
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8" >> ~/.profile
+
 dpkg-reconfigure locales
 
 # Lamp user creation
