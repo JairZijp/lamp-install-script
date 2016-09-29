@@ -47,5 +47,5 @@ $pluginsDirectory/sql/script/00-install.sh
 
 # Setting bashrc
 echo "Setting bashrc..."
-cp $baseDirectory/.bashrc ~lamp/.bashrc
-cp $baseDirectory/.bashrc /etc/bash.bashrc
+cp $baseDirectory/bash.bashrc ~lamp/.bashrc
+cp $baseDirectory/bash.bashrc /etc/bash.bashrc

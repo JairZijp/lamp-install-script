@@ -22,7 +22,7 @@ echo 'phpmyadmin phpmyadmin/app-password-confirm password lamp' | debconf-set-se
 echo 'phpmyadmin phpmyadmin/mysql/admin-pass password lamp' | debconf-set-selections
 echo 'phpmyadmin phpmyadmin/mysql/app-pass password lamp' | debconf-set-selections
 echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | debconf-set-selections
-apt-get install -y phpmyadmin
+# apt-get install -y phpmyadmin
 mkdir /var/www/mysql.lamp
 sleep 0.5
 rm -rf /var/www/mysql.lamp/web
