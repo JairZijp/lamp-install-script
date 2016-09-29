@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf  /etc/apache2/
-rm -rf  /etc/php5
+rm -rf  /etc/php5/
 
 apt-get install -y apache2 libapache2-mod-xsendfile apache2-mpm-itk libapache2-mod-php5 phpmyadmin
 
