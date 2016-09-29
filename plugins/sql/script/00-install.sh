@@ -33,6 +33,9 @@ ln -s /usr/share/phpmyadmin /var/www/mysql.lamp/web
 cp /etc/phpmyadmin/apache.conf /etc/phpmyadmin/apache.conf.old
 cat /etc/phpmyadmin/apache.conf.old | sed 's/^Alias/#Alias/g' > /etc/phpmyadmin/apache.conf
 rm /etc/phpmyadmin/apache.conf.old
+
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 service apache2 reload
 
 # automatic root login

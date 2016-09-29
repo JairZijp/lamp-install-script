@@ -7,6 +7,6 @@ a2enmod xsendfile
 a2enmod libapache2-mod-xsendfile
 a2enmod mpm_itk
 
-echo "ServerName localhost" >> /etc/apache2/apache2.conf
+#echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 chown -R lamp.lamp /var/www
