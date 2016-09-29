@@ -12,12 +12,11 @@ fi
 #locale-gen en_US.UTF-8
 #dpkg-reconfigure locales
 
-nano ~./.bash_profile
 echo "Setting locale..."
 echo "# Locale settings
 	export LANGUAGE=en_US.UTF-8
 	export LANG=en_US.UTF-8
-	export LC_ALL=en_US.UTF-8">>~/.bash_profile
+	export LC_ALL=en_US.UTF-8">>~/.profile
 
 source ~./bash_profile	
 
