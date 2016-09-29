@@ -33,6 +33,8 @@ echo "Installing system wide applications..."
 command -v javac || apt-get install -y openjdk-7-jdk
 apt-get install -y ant curl git openssh-server unzip
 
+echo $pluginsDirectory/apache2/script/
+
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
 $pluginsDirectory/apache2/script/20-vhosts.sh
@@ -45,5 +47,5 @@ $pluginsDirectory/sql/script/00-install.sh
 
 # Setting bashrc
 echo "Setting bashrc..."
-cp $baseDirectory/bash.bashrc ~lamp/.bashrc
-cp $baseDirectory/bash.bashrc /etc/bash.bashrc
+cp $baseDirectory/.bashrc ~lamp/.bashrc
+cp $baseDirectory/.bashrc /etc/bash.bashrc
