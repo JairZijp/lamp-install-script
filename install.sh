@@ -52,6 +52,9 @@ $pluginsDirectory/php5/script/php.sh
 # SQL
 $pluginsDirectory/sql/script/00-install.sh
 
+# ZSH
+$pluginsDirectory/zsh/script/00-install.sh
+
 # Setting bashrc
 echo "Setting bashrc..."
 cp $baseDirectory/bash.bashrc ~lamp/.bashrc
