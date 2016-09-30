@@ -15,8 +15,6 @@ echo 'mysql-server- mysql-server/root_password_again password lamp' | debconf-se
 apt-get install -y mysql-server
 echo "Mysql server installed."
 
-mkdir /var/www/mysql.lamp
 sleep 0.5
-rm -rf /var/www/mysql.lamp/web
 
 echo "ServerName localhost" >> /etc/apache2/apache2.conf

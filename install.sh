@@ -17,7 +17,7 @@ locale-gen en_US.UTF-8
 
 sudo dpkg-reconfigure locales
 
-# Lamp user creation
+# User creation
 if ! id "lamp" > /dev/null 2>&1; then
     echo "Lamp user does not exist - Creating lamp user..."
     (echo "lamp"; echo "lamp"; echo ""; echo ""; echo ""; echo ""; echo ""; echo ""; echo "Y") | adduser -q lamp
