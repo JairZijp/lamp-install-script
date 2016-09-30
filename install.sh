@@ -43,7 +43,8 @@ rm -rf  /etc/apache2/
 rm -rf  /etc/php5/
 
 # ZSH
-$pluginsDirectory/zsh/script/zsh.sh
+apt-get install -y zsh
+curl -L http://install.ohmyz.sh | sudo sh
 
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
