@@ -42,6 +42,9 @@ apt-get install -y ant curl git openssh-server unzip
 rm -rf  /etc/apache2/
 rm -rf  /etc/php5/
 
+# ZSH
+sudo $pluginsDirectory/zsh/script/00-install.sh
+
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
 $pluginsDirectory/apache2/script/20-vhosts.sh
@@ -51,9 +54,6 @@ $pluginsDirectory/php5/script/php.sh
 
 # SQL
 $pluginsDirectory/sql/script/00-install.sh
-
-# ZSH
-$pluginsDirectory/zsh/script/00-install.sh
 
 # Setting bashrc
 echo "Setting bashrc..."
