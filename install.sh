@@ -43,7 +43,7 @@ rm -rf  /etc/apache2/
 rm -rf  /etc/php5/
 
 # ZSH
-sudo $pluginsDirectory/zsh/script/00-install.sh
+$pluginsDirectory/zsh/script/zsh.sh
 
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
