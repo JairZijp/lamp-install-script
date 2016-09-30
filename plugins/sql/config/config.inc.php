@@ -9,12 +9,6 @@
  *   /usr/share/doc/phpmyadmin/examples/config.sample.inc.php
  * or
  *   /usr/share/doc/phpmyadmin/examples/config.manyhosts.inc.php
- *
- * NOTE: do not add security sensitive data to this file (like passwords)
- * unless you really know what you're doing. If you do, any user that can
- * run PHP or CGI on your webserver will be able to read them. If you still
- * want to do this, make sure to properly secure the access to this file
- * (also on the filesystem level).
  */
 
 /**
@@ -59,11 +53,6 @@ if (!empty($dbname)) {
     $cfg['Servers'][$i]['user'] = 'root';
     $cfg['Servers'][$i]['password'] = 'lamp';
 
-    /* Uncomment the following to enable logging in to passwordless accounts,
-     * after taking note of the associated security risks. */
-    // $cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
-
-    /* Advance to next server for rest of config */
     $i++;
 }
 

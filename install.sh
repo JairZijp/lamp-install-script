@@ -5,10 +5,6 @@ if [ `id -u` -ne '0' ]; then
   exit 1
 fi
 
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
 echo "Setting locale..."
 echo "# Locale settings
 export LANGUAGE=en_US.UTF-8
