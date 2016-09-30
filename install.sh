@@ -37,7 +37,7 @@ apt-get update --fix-missing
 
 # System wide
 echo "Installing system wide applications..."
-command -v javac || apt-get install -y openjdk-7-jdk
+# command -v javac || apt-get install -y openjdk-7-jdk
 apt-get install -y ant curl git openssh-server unzip
 rm -rf  /etc/apache2/
 rm -rf  /etc/php5/
