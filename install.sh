@@ -13,7 +13,7 @@ echo "Setting locale..."
 echo "# Locale settings
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8">>~/.profile
+export LC_ALL=en_US.UTF-8">>~/.zprofile
 
 locale-gen en_US.UTF-8
 
@@ -45,6 +45,7 @@ rm -rf  /etc/php5/
 # ZSH
 apt-get install -y zsh
 curl -L http://install.ohmyz.sh | sudo sh
+chsh -s $(which zsh)
 
 # Apache 2
 $pluginsDirectory/apache2/script/00-install.sh
@@ -58,8 +59,8 @@ $pluginsDirectory/sql/script/00-install.sh
 
 # Setting bashrc
 echo "Setting bashrc..."
-cp $baseDirectory/bash.bashrc ~lamp/.bashrc
-cp $baseDirectory/bash.bashrc /etc/bash.bashrc
+cp $baseDirectory/bash.bashrc ~lamp/.zshrc
+cp $baseDirectory/bash.bashrc /etc/z.zshrc
 
 echo "Change config Apache2 for support file extension..."
 echo "IncludeOptional conf-enabled/*
