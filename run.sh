@@ -5,7 +5,7 @@ if [ `id -u` -ne '0' ]; then
   exit 1
 fi
 
-branch="development"
+branch="master"
 if [ $# -gt 0 ]; then
   branch=$1
 fi
